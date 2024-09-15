@@ -9,5 +9,13 @@ print(matriz)
 def buble_sorf(fila):
     #algritmo buble sord
     n = len(fila)
-    for i in rango(n)
-        for j in range(n-1, 0, -1):
+    for i in range(n):
+        for j in range(n-1, i, -1):
+            if fila[j] > fila[j-1]:
+                fila[j], fila[j-1]= fila[j-1], fila[j]
+                print(fila)
+
+print("matriz original ")
+print(matriz)
+buble_sorf(matriz[0])
+print(matriz)
