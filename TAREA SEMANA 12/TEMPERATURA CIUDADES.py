@@ -118,34 +118,11 @@ temperaturas = [
         ]
     ]
 ]
-# Función para calcular el promedio de una ciudad
-def calcula_promedio(semana_ciudad):
-    for semana_idx, semana in enumerate(semana_ciudad):
+
+# Calcular el promedio de temperaturas para cada ciudad y semana
+ciudades = ["Ciudad 1", "Ciudad 2", "Ciudad 3"]
+for ciudad_idx, ciudad in enumerate(temperaturas):
+    for semana_idx, semana in enumerate(ciudad):
         suma_temperaturas = sum([dia["temp"] for dia in semana])
         promedio = suma_temperaturas / len(semana)
-        print(f"Semana {semana_idx + 1}: Promedio de {promedio:.2f} grados")
-
-# Menu interactivo
-while True:
-    print("\nSeleccione la ciudad")
-    print("1. Portoviejo")
-    print("2. Santo Domingo")
-    print("3. Quito")
-    print("4. Salir")
-
-    opcion = input("Ingrese la opción de la ciudad que desea el promedio: ")
-
-    if opcion == "1":
-        print("Promedio de temperatura de Portoviejo")
-        calcula_promedio(temperaturas[0])
-    elif opcion == "2":
-        print("Promedio de temperatura de Santo Domingo")
-        calcula_promedio(temperaturas[1])
-    elif opcion == "3":
-        print("Promedio de temperatura de Quito")
-        calcula_promedio(temperaturas[2])
-    elif opcion == "4":
-        print("Saliendo del programa")
-        break
-    else:
-        print("Opción no válida, intente nuevamente")
+        print(f"Promedio de temperaturas en {ciudades[ciudad_idx]}, Semana {semana_idx + 1}: {promedio:.2f} grados")
