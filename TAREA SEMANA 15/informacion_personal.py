@@ -1,23 +1,21 @@
-# Creación del diccionario con información ficticia
+# 1. Crear un diccionario
 informacion_personal = {
     "nombre": "Yandel Cevallos",
     "edad": 17,
-    "ciudad": "Portoviejo",
-    "profesion": "Ingeniero"
+    "ciudad": "Portoviejo"
 }
 
-# Acceder y modificar el valor asociado a la clave "ciudad"
-informacion_personal["ciudad"] = "Guayaquil"  # Modificar la ciudad a Guayaquil
+# 2. Acceder y modificar valores
+informacion_personal["ciudad"] = "Crucita"  # Cambiamos la ciudad
+informacion_personal["profesion"] = "Programador"  # Agregamos una nueva clave-valor
 
-# Verificar si la clave "telefono" existe, si no, agregarla
+# 3. Verificar existencia de claves
 if "telefono" not in informacion_personal:
-    informacion_personal["telefono"] = "0999999999"  # Número de teléfono ficticio
+    informacion_personal["telefono"] = "1234567890"
 
-# Eliminar la clave "edad" del diccionario
-informacion_personal.pop("edad", None)
+# 4. Eliminar una clave
+del informacion_personal["edad"]
 
-# Imprimir el diccionario final después de todas las operaciones
-print("Diccionario final:")
-for clave, valor in informacion_personal.items():
-    print(f"{clave}: {valor}")
+# 5. Imprimir el diccionario final
+print(informacion_personal)
 
